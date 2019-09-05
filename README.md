@@ -2,6 +2,7 @@
 
 Kafka Confluent Reference links
 Schema registry links
+
 https://github.com/nathanviswa278/springKafkaRegistry/blob/7fd9199578bd2c0104de9b1b38842efa22dd93fa/README.md
 
 https://github.com/italiviocorrea/devops/blob/75ce274ff62affdb1973b90e7f4eb75bec53ebfe/docker/images/debezium/tutorial/README.md

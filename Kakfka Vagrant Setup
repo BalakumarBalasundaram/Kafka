@@ -1,0 +1,3 @@
+https://github.com/infobarbosa/kafka-kerberos
+Kafka provides the means to enforce user authentication and authorization to access its various resources and operations. It does so using its ACLs and pluggable authorizer entities. This article includes a walkthrough of how to set up this authentication and authorization in a Kafka cluster.
+https://developer.ibm.com/tutorials/kafka-authn-authz/

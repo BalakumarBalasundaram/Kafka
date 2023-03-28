@@ -1,0 +1,305 @@
+https://kafka.apache.org/documentation.html#design
+
+Kafka architecture
+Log
+Topics
+Partitions
+Difference between Partition and Log?
+Partitions group data by key
+Important characteristics of Kafka
+Producers and Consumers
+Producer
+Consumer
+Consumer group
+Flow of sending a message
+Broker and Clusters
+Broker
+Cluster membership management with Zookeeper
+Cluster controller
+Replica
+Leader replica
+Follower replica
+Confugrations
+Hardware selection
+Disk Throughput
+Disk capacity
+Memory
+Partitions count, replication factor
+Patitions
+Replication: should be at least 2, usually 3, maximum 4
+Configure topic
+Retention and clean up policies(Compaction)
+Paritions and Segments
+Configure producer
+Kafka broker discovery
+Options for producer configuration
+Message compression for high-throughpput producer
+Producer batching
+Idempotent producer
+Configure consumer
+How kafka handle consumers exit/enter groups?
+Controlling consumer liveness?
+Consumer offset
+Consumer offset reset behaviours
+Delivery semantics for consumers
+Offset management
+Consumer offset commits strategies
+Schema registry
+Notes:
+
+Kafka Core APIs
+Kafka provides five core APIs which enables clients to send, read or stream data and connect to or manage the Kafka broker.
+
+The Producer API allows applications to send streams of data to topics in the Kafka cluster.
+The Consumer API allows applications to read streams of data from topics in the Kafka cluster.
+The Streams API allows transforming streams of data from input topics to output topics.
+The Connect API allows implementing connectors that continually pull from some source system or application into Kafka or push from Kafka into some sink system or application.
+The Admin API allows managing and inspecting topics, brokers, and other Kafka objects.
+
+
+Kafka Internals
+
+https://github.com/japila-books/kafka-internals
+
+https://books.japila.pl/kafka-internals/overview/
+
+https://books.japila.pl/kafka-internals/tools/
+
+https://books.japila.pl/kafka-internals/clients/
+
+https://books.japila.pl/kafka-internals/tools/kafka-configs/
+
+
+
+beginners
+
+https://github.com/PacktPublishing/Apache-Kafka-for-absolute-beginners
+
+Schema Registry Evolution
+An important aspect of data management is schema evolution. After the initial schema is defined, applications may need to evolve it over time. 
+
+https://docs.confluent.io/platform/current/schema-registry/avro.html#full-compatibility
+
+
+
+kmql
+Kafka Management with sQL
+
+kmql is a command that allows you to query Apache Kafka cluster's metadata using SQL.
+
+https://github.com/kawamuray/kmql
+
+
+
+Kafka Use Cases
+https://github.com/hiimivantang/kafka-testcases-ansible
+
+https://github.com/emitskevich/kafka-replicator-exactly-once
+
+
+
+4 messaging
+https://github.com/smarkov05/4-messaging-in-java
+
+
+
+https://github.com/bkaminnski/kafka-in-spring
+
+
+
+https://github.com/vigneshkmr84/kafka-streams-project
+
+ETL
+
+https://github.com/saajan20/ETL-using-Spring-Boot-and-Apache-Kafka
+
+ETL - Working on personal setup (Intellij Project - etl-springboot-kafka)
+
+Zookeeper Developer Guide
+Configuration Docs	https://github.com/apache/zookeeper/tree/master/zookeeper-docs/src/main/resources/markdown
+Kafka Developer Guide
+Kafka in visualization
+
+Event sizer
+
+https://softwaremill.com/kafka-visualisation/
+
+https://eventsizer.io/
+
+compatibility	https://docs.confluent.io/5.2.0/installation/versions-interoperability.html#clients
+Kafka Platform	
+Minimal Platform: Start Standalone Kafka Broker/Zookeeper/
+
+Option A: Start a Kafka Broker for me (local computer / edge node)
+
+Option B: Connect to broker running anywhere else(GBI Infra Kafka Platform/Confluent Cloud)
+
+Option C: Start a Kafka Broker on Open Shift platform (yet to explore)
+
+Option D: Provision a remote desktop for Kafka Lab Exercises
+
+Learning Confluent Platforms/Components
+
+Confluent Schema Registry
+Confluent Kafka Connect
+Confluent KSQL DB
+Confluent Control Center
+Confluent Rest Proxy
+Requires understanding on license usage (Again all above options can be considered)
+
+Confluentinc GitHub	https://github.com/confluentinc
+Confluent Platform
+
+
+
+Confluent Platform all in one repository	https://github.com/confluentinc/cp-all-in-one
+Confluentinc Demo	https://github.com/confluentinc/cp-demo
+Kafka Docker playground	https://github.com/vdesabou/kafka-docker-playground
+Confluent Platform package installations	https://docs.confluent.io/platform/current/platform-quickstart.html#ce-quickstart
+Confluent Cloud	https://www.confluent.io/confluent-cloud/tryfree/?_ga=2.231953567.1495031791.1666782241-1654411968.1666782241
+Kafka Developement	
+Get Started with Java	https://developer.confluent.io/get-started/java/
+Get Started with Python	https://developer.confluent.io/get-started/python/
+Get Started with SQL	https://ksqldb.io/quickstart-cloud.html?_ga=2.35528034.2132332968.1666781817-2098498874.1629704074
+100 Days of code	https://developer.confluent.io/100-days-of-code/
+Confluent Learn Kafka	
+https://developer.confluent.io/learn-kafka/
+
+https://github.com/confluentinc/learn-kafka-courses
+
+Kafka API
+
+
+
+
+(Admin/Consumer/Producer/
+
+Common-configs)
+
+
+
+https://javadoc.io/doc/org.apache.kafka/kafka-clients/latest/index.html
+Streams 	
+https://javadoc.io/doc/org.apache.kafka/kafka-streams/latest/index.html
+
+
+
+Producers	
+Send messages using Apache Kafka Producers CLI
+Send messages using Java Kafka Clients
+Seeding messages using Confluent Python library
+Consumers	
+In this lab, we will have the opportunity to implement with different consumers using:
+
+Consume messages using Apache Kafka Consumer CLI
+Consume messages using Java Kafka Clients
+Consume messages using Confluent Python library
+Confluent Parallel Consumer	https://github.com/confluentinc/parallel-consumer
+Kafka Streams DSL vs Processor API	https://github.com/mkuthan/example-kafkastreams
+KStream	
+
+
+a. Nice Introduction	
+https://github.com/Armando1514/Kafka-Streams-a-nice-introduction
+
+b. Lab Exercises (KStreams)
+
+https://github.com/confluentinc/kafka-streams-examples
+c. Stream sales generator
+
+https://github.com/garystafford/streaming-sales-generator
+d. Learning Journal
+
+https://github.com/LearningJournal/Kafka-Streams-Real-time-Stream-Processing
+Kafka Connect	https://www.confluent.io/hub/
+Lab Exercises (Connectors)	
+Write an application to receives messages from a mqtt broker and sends the messages to a kafka cluster. Topic mapping is configurable.
+KSQL DB 	https://github.com/confluentinc/ksql
+Stream Processing	
+Streams and tables - Create relations with schemas over your Apache Kafka topic data
+Push queries- Continuous queries that push incremental results to clients in real time
+Pull queries - Query materialized views on demand, much like with a traditional database
+Connectors	
+Connect - Integrate with any Kafka Connect data source or sink, entirely from within ksqlDB
+Materialized Views	
+Materialized views - Define real-time, incrementally updated materialized views over streams using SQL
+Lab Exercises (KSQL integration with KStreams)	https://github.com/confluentinc/training-ksql-and-streams-src
+Docker Workshop	
+
+https://github.com/layer5io/containers-101-workshop
+Kafka Framework Integration	
+Micronaut-Kafka	https://github.com/micronaut-projects/micronaut-kafka
+spring-kafka	https://github.com/spring-projects/spring-kafka
+Spring-Kafka	
+Development Basics	Kafka Producer & Consumer Apps
+Problem 1: spring-kafka-simple-producer-consumer
+
+Do an implementation of a very simple producer submits string based messages to a Kafka topic and an equally simple consumer that reads the messages from that same topic and stores them in-memory. Uses a Bean-based configuration
+Problem 2: springkafka-result-aware-producer-consumer
+
+Build a program on the simple producer and consumer scenario and adds callbacks to the producer, so that the application can act upon the success or failure of writing messages to a Kafka topic. The consumer on the other hand uses explicit acknowledgements and thus manually commits consumer offsets back to the Kafka cluster. This enables the application to properly execute further actions on consumed messages until they are acknowledged. Uses a Property-based configuration. This module also showcases how to write integration tests using spring-kafka-test.
+Problem 3: Spring Kafka Non-Blocking Retries and Dead Letter Topics
+
+Introduction
+Simple Blocking Retries
+Non-Blocking Retries and Dead Letter Topics
+Advantages
+Disadvantages
+How to Properly Implement a Back Off Delay?
+Recoverable vs Non-Recoverable Errors
+Topic Naming for Multiple Consumer Groups
+Non-Blocking Retries in Spring Kafka
+How to Run the Sample?
+springkafka-transactions
+
+Build a program on  how to implement a producer that is both idempotent and transactional. Uses Bean-based configuration
+
+Spring Boot (2.3.3) RESTful API with Kafka Streams (2.6.0)
+https://github.com/ben-jamin-chen/springboot-kafka-streams-rest-api
+Testing Basics
+
+Integration Test Spring Kafka with Embedded Kafka Consumer and Producer
+
+Problem 1: spring-kafka-embedded-test-cases
+
+https://github.com/embeddedkafka/embedded-kafka, https://github.com/embeddedkafka/embedded-kafka-schema-registry
+
+Use a Embedded Kafka and Kafka Schema registry library to build an Avro producer & consumer unit test cases & integration test cases
+
+Modules
+
+1.Streams clients
+
+2. Embedded Kafka Cluster module
+
+3. Consumer producer client module
+
+4. data pipeline module
+
+5. e2e module
+
+https://github.com/sysco-middleware/kafka-testing
+
+Modules and approaches
+streams-client module contains examples of unit-tests for kafka-streams topologies with kafka-streams-test-utils. Approach covers testing topologies (stateful & stateless processors) with different serdes including avro and confluent schema registry.
+embedded-kafka-cluster module is example of kafka-embedded cluster in memory (1 Zookeeper, 1 Kafka broker, 1 Confluent schema registry). Embedded kafka cluster is used for integration test of kafka-client application.
+consumer-producer-clients module contains examples of integration tests with embedded kafka cluster and kafka based applications with Producer/Consumer API
+data-pipeline module contains examples of integration tests with embedded kafka cluster, wire-mock and kafka based applications with Streams API
+e2e module contains IT test for data pipeline, using testcontainers
+
+
+https://github.com/gklijs/ksqlDB-GraphQL-poc
+
+Distributed Tracing
+
+
+Event Driven	
+
+
+
+The goals of this tutorial is to help tech sellers getting good knowledge of Event-driven solution based on IBM Event Streams, so they could develop quick proof of concepts around event streams solution.
+
+https://github.com/natarajan-k/eda-tech-academy-new
+
+
+
